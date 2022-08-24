@@ -17,7 +17,7 @@ export function Layout({ children }: LayoutProps) {
                 </Head>
 
                 <main className="flex min-h-screen w-full grow flex-col bg-white">
-                    <div className="absolute top-0 right-0 w-1/2">
+                    <div className="absolute top-0 right-0 hidden w-2/3 sm:block lg:w-1/2">
                         <Image src={blob} layout="responsive" />
                     </div>
                     {children}

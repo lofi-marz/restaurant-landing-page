@@ -18,7 +18,7 @@ module.exports = {
                 text: ['Inter', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: colors.red[500],
+                primary: colors.green[900],
                 secondary: colors.orange[500],
             },
         },

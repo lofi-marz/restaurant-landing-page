@@ -1,45 +1,40 @@
-import { FaArrowRight, FaLeaf } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import React from 'react';
 import Image from 'next/image';
 import plate from 'plate-3.png';
+import { motion } from 'framer-motion';
+
+function PlateImage() {
+    return (
+        <motion.div
+            className="w-full max-w-lg"
+            initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ ease: 'easeOut', duration: 1 }}>
+            <Image src={plate} layout="responsive" />
+        </motion.div>
+    );
+}
 
 export function Hero() {
     return (
-        <div className="flex h-screen w-full flex-col items-center justify-center text-neutral-900">
-            <nav className="flex h-20 w-full items-center justify-between px-24 font-title text-2xl font-bold">
-                <div className="flex w-fit items-center justify-center gap-2">
-                    <FaLeaf className="text-green-900" />
-                    <div className="font-bold">chunkies!</div>
+        <section className="flex h-full  min-h-screen w-full grow flex-col gap-4 px-10 font-title text-neutral-900 lg:grid lg:grid-cols-2 lg:gap-0">
+            <div className="flex items-center justify-center drop-shadow-lg lg:order-last">
+                <PlateImage />
+            </div>
+            <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:pl-14 lg:text-start">
+                <div className="text-4xl font-bold lg:text-5xl lg:leading-[60px]">
+                    Vegetarian Food, No Compromise!
                 </div>
-                <div className="flex gap-8 px-8 text-xl text-neutral-900">
-                    <a>home</a>
-                    <a>about us</a>
-                    <a>order</a>
-                    <a>bookings</a>
-                    <a>contact us</a>
-                </div>
-            </nav>
-            <section className="grid h-full w-full grid-cols-2 px-10 font-title">
-                <div className="flex flex-col items-start justify-center gap-4 pl-14">
-                    <div className="text-5xl font-bold leading-[60px]">
-                        Vegetarian Food, <br /> No Compromise!
-                    </div>
-                    <p className="w-2/3 text-lg text-neutral-600">
-                        Delicious meat-free meals, with flavour to spare.
-                        Inspired by Carribean cuisine, and bursting with
-                        flavour!
-                    </p>
-                    <button className="my-4 flex items-center justify-center gap-2 rounded-full bg-green-900 px-6 py-4 text-white">
-                        <span>Order now</span>
-                        <FaArrowRight />
-                    </button>
-                </div>
-                <div className="flex items-center justify-center drop-shadow-lg">
-                    <div className="w-full max-w-lg">
-                        <Image src={plate} layout="responsive" />
-                    </div>
-                </div>
-            </section>
-        </div>
+                <p className="w-3/4 text-lg text-neutral-600">
+                    Delicious meat-free meals, with flavour to spare. Inspired
+                    by Carribean cuisine, and bursting with flavour!
+                </p>
+                <button className="my-4 flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-white">
+                    <span>Order now</span>
+                    <FaArrowRight />
+                </button>
+            </div>
+        </section>
     );
 }

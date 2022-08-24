@@ -14,7 +14,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                title: ['Inter', ...defaultTheme.fontFamily.sans],
+                title: ['Poppins', ...defaultTheme.fontFamily.sans],
                 text: ['Inter', ...defaultTheme.fontFamily.sans],
             },
             colors: {

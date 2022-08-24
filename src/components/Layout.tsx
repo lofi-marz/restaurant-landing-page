@@ -1,16 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 import { WithChildrenProps } from 'types';
-import { AnimatePresence, motion } from 'framer-motion';
+import blob from 'blob.webp';
+import Image from 'next/image';
 
 type LayoutProps = WithChildrenProps;
 
-
-
 export function Layout({ children }: LayoutProps) {
-
     return (
-        <div className="dark h-full min-h-screen w-screen">
+        <div className="h-full min-h-screen w-full">
             <div className="flex flex-col items-center justify-center">
                 <Head>
                     <title>hi</title>
@@ -18,8 +16,11 @@ export function Layout({ children }: LayoutProps) {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                <main className="flex min-h-screen w-screen grow flex-col dark:bg-zinc-900 dark:text-white">
-                   Hi
+                <main className="flex min-h-screen w-full grow flex-col bg-white">
+                    <div className="absolute top-0 right-0 w-1/2">
+                        <Image src={blob} layout="responsive" />
+                    </div>
+                    {children}
                 </main>
             </div>
         </div>

@@ -15,7 +15,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 title: ['Poppins', ...defaultTheme.fontFamily.sans],
-                text: ['Inter', ...defaultTheme.fontFamily.sans],
+                text: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: colors.green[900],

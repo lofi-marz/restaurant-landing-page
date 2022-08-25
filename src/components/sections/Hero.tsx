@@ -18,12 +18,12 @@ function PlateImage() {
 
 export function Hero() {
     return (
-        <section className="flex h-full  min-h-screen w-full grow flex-col gap-4 px-10 font-title text-neutral-900 lg:grid lg:grid-cols-2 lg:gap-0">
+        <section className="section flex h-full min-h-screen w-full grow flex-col gap-4 font-text text-neutral-900 lg:grid lg:grid-cols-2 lg:gap-0">
             <div className="flex items-center justify-center drop-shadow-lg lg:order-last">
                 <PlateImage />
             </div>
-            <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:pl-14 lg:text-start">
-                <div className="text-4xl font-bold lg:text-5xl lg:leading-[60px]">
+            <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-start">
+                <div className="font-title text-4xl font-bold lg:text-5xl lg:leading-[60px]">
                     Vegetarian Food, No Compromise!
                 </div>
                 <p className="w-3/4 text-lg text-neutral-600">

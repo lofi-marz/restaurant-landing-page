@@ -39,19 +39,29 @@ export function NavBar() {
     const { scrollYProgress } = useViewportScroll();
 
     const [atPageStart, setAtPageStart] = useState(true);
-
-    scrollYProgress.onChange((v) => setAtPageStart(v < 0.1));
+    const [scrollingDown, setScrollingDown] = useState(false);
+    scrollYProgress.onChange((v) => {
+        console.log(scrollYProgress.getVelocity());
+        //TODO: This feels like there should be a better way
+        setAtPageStart(v < 0.1);
+        setScrollingDown(v > 0.5 && scrollYProgress.getVelocity() <= 0);
+    });
 
     const containerVariants: Variants = {
         transparent: { backgroundColor: '#00000000' },
         solid: { backgroundColor: '#FFFFFF' },
+        hidden: { opacity: 0 },
+        show: { opacity: 1 },
     };
 
     return (
         <motion.nav
             className="sticky top-0 z-10 flex h-20 w-full items-center justify-between px-8 font-title text-3xl lg:px-24 lg:text-2xl "
             variants={containerVariants}
-            animate={atPageStart ? 'transparent' : 'solid'}
+            animate={[
+                atPageStart ? 'transparent' : 'solid',
+                scrollingDown ? 'hidden' : 'show',
+            ]}
             layout>
             <Logo />
             {lg && <NavLinks inverted={!atPageStart} />}

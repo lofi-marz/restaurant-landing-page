@@ -41,7 +41,7 @@ export function NavBar() {
     const [atPageStart, setAtPageStart] = useState(true);
     const [scrollingDown, setScrollingDown] = useState(false);
     scrollYProgress.onChange((v) => {
-        console.log(scrollYProgress.getVelocity());
+        //console.log(scrollYProgress.getVelocity());
         //TODO: This feels like there should be a better way
         setAtPageStart(v < 0.1);
         setScrollingDown(v > 0.5 && scrollYProgress.getVelocity() <= 0);

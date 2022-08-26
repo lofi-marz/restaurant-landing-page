@@ -3,7 +3,7 @@ import { IoFastFood } from 'react-icons/io5';
 
 export function Icons() {
     return (
-        <section className="section flex w-full flex-col items-center justify-center gap-12 py-10 md:flex-row md:items-baseline md:gap-24">
+        <section className="section flex w-full flex-col items-center justify-center gap-12 py-36 md:flex-row md:items-baseline md:gap-24">
             <div className="flex flex-col items-center justify-center gap-2">
                 <FaLeaf className="mb-6 text-8xl text-primary" />
                 <div className="font-title text-4xl font-bold">Meat-Free</div>

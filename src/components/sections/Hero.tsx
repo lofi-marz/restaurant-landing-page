@@ -23,7 +23,7 @@ export function Hero() {
                 <PlateImage />
             </div>
             <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-start">
-                <div className="font-title text-4xl font-bold lg:text-5xl lg:leading-[60px]">
+                <div className="font-title text-4xl font-bold lg:text-5xl lg:leading-[3.5rem]">
                     Vegetarian Food, No Compromise!
                 </div>
                 <p className="w-3/4 text-lg text-neutral-600">

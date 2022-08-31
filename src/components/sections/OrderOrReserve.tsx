@@ -4,7 +4,7 @@ import { FaArrowRight, FaMotorcycle } from 'react-icons/fa';
 export function OrderOrReserve() {
     const today = new Date().toISOString().split('T')[0];
     return (
-        <section className="section relative flex grid w-full grid-rows-2  p-0 lg:grid-cols-2 lg:grid-rows-1">
+        <section className="section relative flex grid h-screen w-full grid-rows-2 p-0 lg:h-auto lg:grid-cols-2 lg:grid-rows-1">
             <div className="flex h-full w-full flex-col items-center justify-center gap-5 px-5 lg:p-20">
                 <FaMotorcycle className="text-9xl text-primary" />
                 <div className="flex w-full flex-col items-center justify-center gap-2">
@@ -18,7 +18,13 @@ export function OrderOrReserve() {
                     <FaArrowRight />
                 </button>
             </div>
-            <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-primary px-5 lg:p-20">
+            <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-primary px-5  lg:p-20">
+                <div className="flex w-full flex-col items-center justify-center gap-2 text-white">
+                    <div className="text-2xl font-light">Reserve</div>
+                    <div className="text-center text-4xl font-bold">
+                        Come And Sit With Us!
+                    </div>
+                </div>
                 <form className="flex flex-col gap-4">
                     <input
                         type="date"

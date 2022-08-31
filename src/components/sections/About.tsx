@@ -11,12 +11,7 @@ export function About() {
                 initial={{ y: 0 }}
                 whileInView={{ y: 0 }}
                 transition={{ ease: 'easeInOut', duration: 10 }}>
-                <Image
-                    className="rounded shadow"
-                    src={familyDinner}
-                    layout="fill"
-                    objectFit="cover"
-                />
+                <Image src={familyDinner} layout="fill" objectFit="cover" />
             </motion.div>
             <div className="w-full justify-self-start px-4 lg:w-1/2 lg:px-20">
                 <h1 className="w-full pb-4 font-title text-4xl font-bold lg:text-6xl lg:leading-[4rem]">

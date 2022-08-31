@@ -2,7 +2,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import React from 'react';
 import Image from 'next/image';
 import plate from 'plate-3.png';
-import { motion } from 'framer-motion';
+import { motion, Variant, Variants } from 'framer-motion';
+import { fadeInVariants } from '../../animations';
 
 function PlateImage() {
     return (
@@ -22,19 +23,35 @@ export function Hero() {
             <div className="flex items-center justify-center drop-shadow-lg lg:order-last">
                 <PlateImage />
             </div>
-            <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-start">
-                <div className="font-title text-4xl font-bold lg:text-5xl lg:leading-[3.5rem]">
+            <motion.div
+                className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-start"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInVariants}>
+                <motion.div
+                    className="font-title text-4xl font-bold lg:text-5xl lg:leading-[3.5rem]"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInVariants}>
                     Vegetarian Food, No Compromise!
-                </div>
-                <p className="w-3/4 text-lg text-neutral-600">
+                </motion.div>
+                <motion.p
+                    className="w-3/4 text-lg text-neutral-600"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInVariants}>
                     Delicious meat-free meals, with flavour to spare. Inspired
                     by Carribean cuisine, and bursting with flavour!
-                </p>
-                <button className="my-4 flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-white">
+                </motion.p>
+                <motion.button
+                    className="my-4 flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-white"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInVariants}>
                     <span>Order now</span>
                     <FaArrowRight />
-                </button>
-            </div>
+                </motion.button>
+            </motion.div>
         </section>
     );
 }

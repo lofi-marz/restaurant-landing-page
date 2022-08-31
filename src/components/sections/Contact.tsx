@@ -1,4 +1,3 @@
-import { FaFacebook, FaTwitter, FaYoutube } from 'react-icons/all';
 import { FaLeaf } from 'react-icons/fa';
 
 export function Contact() {

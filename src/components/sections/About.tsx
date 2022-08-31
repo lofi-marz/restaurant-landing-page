@@ -5,20 +5,21 @@ import { motion } from 'framer-motion';
 
 export function About() {
     return (
-        <section className="section relative flex h-screen items-center justify-start gap-10 overflow-clip text-white">
+        <section className="section relative flex min-h-screen items-center justify-start gap-10 overflow-clip text-white">
             <motion.div
                 className="absolute top-0 left-0 -z-10 h-full w-full brightness-[.25] saturate-[.75]"
-                initial={{ y: -125 }}
+                initial={{ y: 0 }}
                 whileInView={{ y: 0 }}
                 transition={{ ease: 'easeInOut', duration: 10 }}>
                 <Image
-                    className=" rounded shadow"
+                    className="rounded shadow"
                     src={familyDinner}
-                    layout="responsive"
+                    layout="fill"
+                    objectFit="cover"
                 />
             </motion.div>
-            <div className="w-1/2 justify-self-start px-20">
-                <h1 className="w-full pb-4 font-title font-bold lg:text-6xl lg:leading-[4rem]">
+            <div className="w-full justify-self-start px-4 lg:w-1/2 lg:px-20">
+                <h1 className="w-full pb-4 font-title text-4xl font-bold lg:text-6xl lg:leading-[4rem]">
                     Restauraunt Quality, <br /> Home Feel
                 </h1>
                 <p className="w-full font-text text-lg leading-6">

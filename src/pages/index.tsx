@@ -2,6 +2,8 @@ import type { NextPage } from 'next';
 import React from 'react';
 import {
     About,
+    Contact,
+    Footer,
     Hero,
     Icons,
     NavBar,
@@ -16,6 +18,8 @@ const Home: NextPage = () => {
             <Icons />
             <About />
             <OrderOrReserve />
+            <Contact />
+            <Footer />
         </div>
     );
 };

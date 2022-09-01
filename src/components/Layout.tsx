@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
         <div className="h-full min-h-screen w-full">
             <div className="flex flex-col items-center justify-center">
                 <Head>
-                    <title>hi</title>
+                    <title>chunkies !</title>
                     <meta name="description" content="" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
